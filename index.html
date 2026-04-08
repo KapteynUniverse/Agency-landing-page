@@ -31,13 +31,30 @@
             fill-rule="nonzero"
           /></svg
       ></a>
-      <nav>
+      <nav aria-label="primary-navigation" class="header__nav">
         <a href="#">About</a>
         <a href="#Services">Services</a>
         <a href="#">Projects</a>
         <a href="#Contact">Contact</a>
       </nav>
       <h1>We are creatives</h1>
+      <svg
+        aria-hidden="true"
+        width="36"
+        height="114"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          stroke="#FFF"
+          stroke-width="6"
+          fill="none"
+          fill-rule="evenodd"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M18 3v100M3 95.484l15 15 15-15" />
+        </g>
+      </svg>
     </header>
     <main>
       <section id="Services" aria-labelledby="main__section-title">
@@ -58,12 +75,15 @@
             />
           </picture>
           <h3>Transform your brand</h3>
-          <p>
+          <p class="text-lg">
             We are a full-service creative agency specializing in helping brands
             grow fast. Engage your clients through compelling visuals that do
             most of the marketing for you.
           </p>
-          <a href="#" aria-label="Learn more about transforming your brand"
+          <a
+            href="#"
+            aria-label="Learn more about transforming your brand"
+            class="text-xm tracking-widest"
             >Learn More</a
           >
         </article>
@@ -83,7 +103,7 @@
             />
           </picture>
           <h3>Stand out to the right audience</h3>
-          <p>
+          <p class="text-lg">
             Using a collaborative formula of designers, researchers,
             photographers, videographers, and copywriters, we’ll build and
             extend your brand in digital places.
@@ -91,6 +111,7 @@
           <a
             href="#"
             aria-label="Learn more about how to stand out to the right audience"
+            class="text-xm tracking-widest"
             >Learn More</a
           >
         </article>
@@ -110,7 +131,7 @@
                 height="1200"
               />
             </picture>
-            <h3>Graphic design</h3>
+            <h3 class="text-xl">Graphic design</h3>
             <p>
               Great design makes you memorable. We deliver artwork that
               underscores your brand message and captures potential clients’
@@ -132,7 +153,7 @@
                 height="1200"
               />
             </picture>
-            <h3>Photography</h3>
+            <h3 class="text-xl">Photography</h3>
             <p>
               Increase your credibility by getting the most stunning,
               high-quality photos that improve your business image.
@@ -142,7 +163,7 @@
       </section>
       <section aria-labelledby="testimonials-title">
         <h2>Client testimonials</h2>
-        <div>
+        <div class="text-lg">
           <article>
             <img
               src="./assets/images/image-emily.jpg"
@@ -154,8 +175,8 @@
               We put our trust in Sunnyside and they delivered, making sure our
               needs were met and deadlines were always hit.
             </blockquote>
-            <h3>Emily R.</h3>
-            <p>Marketing Director</p>
+            <h3 class="testimonials__title text-lg">Emily R.</h3>
+            <p class="text-sm">Marketing Director</p>
           </article>
           <article>
             <img
@@ -168,8 +189,8 @@
               Sunnyside’s enthusiasm coupled with their keen interest in our
               brand’s success made it a satisfying and enjoyable experience.
             </blockquote>
-            <h3>Thomas S.</h3>
-            <p>Chief Operating Officer</p>
+            <h3 class="testimonials__title text-lg">Thomas S.</h3>
+            <p class="text-sm">Chief Operating Officer</p>
           </article>
           <article>
             <img
@@ -182,13 +203,13 @@
               Incredible end result! Our sales increased over 400% when we
               worked with Sunnyside. Highly recommended!
             </blockquote>
-            <h3>Jennie F.</h3>
-            <p>Business Owner</p>
+            <h3 class="testimonials__title text-lg">Jennie F.</h3>
+            <p class="text-sm">Business Owner</p>
           </article>
         </div>
       </section>
     </main>
-    <footer id="Contact">
+    <footer id="Contact" class="text-lg">
       <div class="footer__images">
         <picture>
           <source
@@ -260,7 +281,7 @@
             fill-rule="nonzero"
           /></svg
       ></a>
-      <nav>
+      <nav aria-label="footer-navigation" class="footer__nav">
         <a href="#">About</a>
         <a href="#Services">Services</a>
         <a href="#">Projects</a>
