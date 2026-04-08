@@ -1,0 +1,158 @@
+@font-face {
+  font-family: Barlow;
+  src:
+    local("Barlow"), url("./assets/fonts/Barlow-SemiBold.ttf"),
+    format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Fraunces;
+  src:
+    local("Fraunces"), url("./assets/fonts/Fraunces-VariableFont.ttf"),
+    format("truetype");
+  font-weight: 700 900;
+  font-display: swap;
+}
+
+:root {
+  /* COLORS */
+  /* PRIMARY */
+  --soft-red: hsl(7, 99%, 70%);
+  --yellow: hsl(51, 100%, 49%);
+  --dark-des-cyan: hsl(167, 40%, 24%); /* graphic design text */
+  --dark-blue: hsl(198, 62%, 26%); /* photo text */
+  --dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+
+  /* NEUTRAL */
+  --white: hsl(0, 0%, 100%);
+  --grayish-blue: hsl(210, 4%, 67%);
+  --dark-grayish-blue: hsl(232, 10%, 55%);
+  --very-dark-grayish-blue: hsl(213, 9%, 39%);
+  --very-dark-des-blue: hsl(212, 27%, 19%);
+
+  /* FONT SIZES */
+
+  --fs-h1: clamp(
+    2.5rem,
+    2.147887323943662rem + 1.5023474178403755vw,
+    3.5rem
+  ); /* 40-56 */
+  --fs-h2: clamp(
+    2rem,
+    1.823943661971831rem + 0.7511737089201878vw,
+    2.5rem
+  ); /* 32-40 */
+  --fs-h3: 1.75rem; /* 28 */
+  --fs-h4: clamp(1rem, 0.912rem + 0.376vw, 1.25rem); /* 16-20 */
+  --fs-nav: clamp(1.125rem, 1.081rem + 0.188vw, 1.25rem); /* 18-20 */
+  --font-size-p-job: 0.875rem; /* 14 */
+  --font-size-regular: 1rem; /* 16 */
+  --font-size-p: 1.125rem; /* 18 */
+
+  /* FONT WEIGHT */
+
+  --fw-fraunces-700: 700;
+
+  /* PADDING SPACING */
+  /* TRANSFORM-STAND OUT */
+
+  --p-block: clamp(4rem, 1.931rem + 8.826vw, 9.875rem); /* 64-158 */
+  --p-left: clamp(1.5rem, -0.393rem + 8.075vw, 6.875rem); /* 24-110 */
+  --p-right: clamp(1.5rem, -1.625rem + 13.333vw, 10.375rem); /* 24-166 */
+
+  /* TESTIMONIAL */
+
+  --p-top: clamp(4rem, 1.887rem + 9.014vw, 10rem); /* 64-160 */
+  --p-bottom: clamp(5.375rem, 3.746rem + 6.948vw, 10rem); /* 86-160 */
+
+  /* FOOTER */
+
+  --pf-top: clamp(4rem, 3.824rem + 0.751vw, 4.5rem); /* 64-72 */
+  --pf-bottom: clamp(5rem, 5.176rem + -0.751vw, 4.5rem); /* 80-72 */
+  --pf-inline: clamp(2.5rem, -9.164rem + 49.765vw, 35.625rem); /* 40-570 */
+}
+
+/* RESET */
+/* Josh Comeau custom css reset */
+/* https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+*:not(dialog) {
+  margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Increase line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  background-color: var(--white);
+}
