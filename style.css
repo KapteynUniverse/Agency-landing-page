@@ -226,6 +226,7 @@ img {
 button {
   background: transparent;
   border: none;
+  padding: 0;
 }
 
 /* Typography */
@@ -311,6 +312,45 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.header__nav {
+  display: none;
+}
+.header__nav::before {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-left: 16px solid transparent;
+  border-bottom: 16px solid var(--white);
+}
+.header__nav.active {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: fixed;
+  inset: 0;
+  top: 10%;
+  width: calc(100% - 4rem);
+  margin-inline: auto;
+  max-height: fit-content;
+  padding-block: 2rem;
+  background-color: var(--white);
+  color: var(--dark-grayish-blue);
+}
+
+.header__nav > a {
+  padding: 1rem 2rem;
+  width: fit-content;
+  margin-inline: auto;
+  border-radius: 999px;
+}
+.header__nav > a:last-child {
+  background-color: var(--yellow);
+  color: var(--very-dark-des-blue);
 }
 
 h1 {
@@ -415,6 +455,19 @@ footer ul {
 
   header {
     background-image: url("./assets/images/desktop/image-header.jpg");
+  }
+
+  .nav__wrapper > button {
+    display: none;
+  }
+
+  .header__nav {
+    display: flex;
+    gap: clamp(0rem, -3rem + 6.667vw, 3rem);
+  }
+
+  .header__nav > a:last-child {
+    background-color: var(--white);
   }
 
   /* Main */
