@@ -22,7 +22,8 @@
   --yellow: hsl(51, 100%, 49%);
   --dark-des-cyan: hsl(167, 40%, 24%); /* graphic design text */
   --dark-blue: hsl(198, 62%, 26%); /* photo text */
-  --dark-moderate-cyan: hsl(168, 34%, 41%); /* footer */
+  --dark-moderate-cyan: hsl(168, 34%, 41%);
+  --moderate-cyan: hsl(168, 44%, 70%); /* footer */
 
   /* NEUTRAL */
   --white: hsl(0, 0%, 100%);
@@ -217,17 +218,24 @@ a {
   color: inherit;
 }
 
+img {
+  object-fit: cover;
+  height: auto;
+}
+
 button {
   background: transparent;
   border: none;
 }
 
 /* Typography */
+
 body {
   background-color: var(--white);
   font-family: var(--ff-fraunces);
   letter-spacing: var(--ls-base);
   line-height: 1.7;
+  text-align: center;
 }
 
 nav {
@@ -242,6 +250,8 @@ nav {
 h1 {
   font-size: var(--fs-h1);
   letter-spacing: var(--ls-h1);
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 h2 {
@@ -290,8 +300,169 @@ p {
 header {
   color: var(--white);
   background-image: url("./assets/images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: clamp(33.625rem, 27.859rem + 24.601vw, 50rem);
+  padding: 2rem;
+}
+
+.nav__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  margin-block: 6rem;
+}
+
+header > svg {
+  margin-inline: auto;
 }
 
 /* Main */
 
+main {
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+.services__brand p,
+.services__audience p {
+  margin-top: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
+  margin-bottom: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
+}
+
+.services__design,
+.services__photography {
+  display: grid;
+  grid-template-areas: "stack";
+}
+.services__design > picture,
+.services__photography > picture {
+  grid-area: stack;
+}
+.services__design > div,
+.services__photography > div {
+  grid-area: stack;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.75rem;
+  max-width: 21.25rem;
+  margin-inline: auto;
+  height: 100%;
+  padding-top: calc(100% - 3.25rem);
+}
+
+.testimonials {
+  padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem);
+  padding-bottom: clamp(5.375rem, 3.746rem + 6.948vw, 10rem);
+}
+.testimonials > h2 {
+  margin-bottom: 4rem;
+}
+.testimonials__wrapper > article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.testimonials__wrapper > article:not(:last-child) {
+  margin-bottom: 4rem;
+}
+.testimonials__wrapper img {
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
 /* Footer */
+
+footer {
+  background-color: var(--moderate-cyan);
+}
+
+.footer__images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 3.625rem;
+  margin-top: 40px;
+  margin-bottom: 88px;
+}
+
+footer ul {
+  display: flex;
+  gap: 1.75rem;
+}
+
+@media (min-width: 45rem) {
+  /* Header */
+
+  header {
+    background-image: url("./assets/images/desktop/image-header.jpg");
+  }
+
+  /* Main */
+
+  .services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+
+  .services__brand,
+  .services__audience {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: subgrid;
+    align-items: center;
+    text-align: left;
+  }
+  .services__audience img {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .services__audience div {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .services__design > div,
+  .services__photography > div {
+    align-self: end;
+    padding-top: 0;
+    height: auto;
+    padding-bottom: clamp(0rem, -3.25rem + 7.222vw, 3.25rem);
+  }
+
+  .testimonials__wrapper {
+    display: flex;
+  }
+  .testimonials__wrapper blockquote {
+    margin-top: 1.5rem;
+    margin-bottom: 2.375rem;
+  }
+
+  /* Footer */
+
+  .footer__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+  }
+}
