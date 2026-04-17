@@ -581,11 +581,11 @@ footer ul {
     align-items: center;
     text-align: left;
   }
-  .services__audience img {
+  .services__brand img {
     grid-column: 2;
     grid-row: 1;
   }
-  .services__audience div {
+  .services__brand div {
     grid-column: 1;
     grid-row: 1;
   }
