@@ -10,7 +10,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./images/favicon-32x32.png"
+      href="./assets/images/favicon-32x32.png"
     />
 
     <title>Frontend Mentor | Sunnyside agency landing page</title>
@@ -21,7 +21,7 @@
       <a class="keyboard-only" href="#main">Skip to main content</a>
       <a class="keyboard-only" href="#Contact">Skip to footer</a>
       <div class="nav__wrapper">
-        <a href="#" aria-label="Sunnyside Home"
+        <a href="#" aria-label="Sunnyside Home" class="header__logo"
           ><svg
             aria-hidden="true"
             width="124"
@@ -34,7 +34,12 @@
               fill-rule="nonzero"
             /></svg
         ></a>
-        <button>
+        <button
+          class="header__button"
+          aria-label="Open primary navigation bar"
+          aria-expanded="false"
+          aria-controls="header__nav"
+        >
           <svg
             aria-hidden="true"
             width="24"
@@ -48,12 +53,17 @@
             />
           </svg>
         </button>
-        <nav aria-label="primary-navigation" class="header__nav">
+        <nav
+          id="header__nav"
+          aria-label="primary-navigation"
+          class="header__nav"
+        >
           <a href="#">About</a>
           <a href="#Services">Services</a>
           <a href="#">Projects</a>
           <a href="#Contact">Contact</a>
         </nav>
+        <div class="overlay" aria-hidden="true"></div>
       </div>
       <h1>We are creatives</h1>
       <svg
@@ -386,5 +396,6 @@
         </ul>
       </div>
     </footer>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

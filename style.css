@@ -340,6 +340,16 @@ header {
   padding-block: 2rem;
   background-color: var(--white);
   color: var(--dark-grayish-blue);
+  z-index: 1;
+}
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 0%, 0.5);
+}
+.header__nav.active ~ .overlay {
+  display: block;
 }
 
 .header__nav > a {
