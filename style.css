@@ -361,6 +361,21 @@ header > svg {
   margin-inline: auto;
 }
 
+.arrow {
+  animation: arrowAnim 2s infinite;
+  transform-origin: center;
+}
+
+@keyframes arrowAnim {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
 /* Main */
 
 main {
@@ -368,6 +383,12 @@ main {
   margin-inline: auto;
 }
 
+.services__brand > div,
+.services__audience > div {
+  padding: 4rem 1.5rem;
+  max-width: 445px;
+  margin-inline: auto;
+}
 .services__brand p,
 .services__audience p {
   margin-top: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
@@ -399,6 +420,7 @@ main {
 .testimonials {
   padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem);
   padding-bottom: clamp(5.375rem, 3.746rem + 6.948vw, 10rem);
+  padding-inline: 1.5rem;
 }
 .testimonials > h2 {
   margin-bottom: 4rem;
@@ -493,6 +515,17 @@ footer ul {
   .services__audience div {
     grid-column: 1;
     grid-row: 1;
+  }
+
+  .services__brand > div,
+  .services__audience > div {
+    padding-inline: 1.5rem;
+    padding-block: 0;
+  }
+  .services__brand p,
+  .services__audience p {
+    margin-top: clamp(0rem, -2rem + 4.444vw, 2rem);
+    margin-bottom: clamp(0rem, -2.5rem + 5.556vw, 2.5rem);
   }
 
   .services__design > div,
