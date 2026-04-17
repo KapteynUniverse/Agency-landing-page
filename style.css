@@ -20,10 +20,10 @@
   /* PRIMARY */
   --soft-red: hsl(7, 99%, 70%);
   --yellow: hsl(51, 100%, 49%);
-  --dark-des-cyan: hsl(167, 40%, 24%); /* graphic design text */
-  --dark-blue: hsl(198, 62%, 26%); /* photo text */
+  --dark-des-cyan: hsl(167, 40%, 24%);
+  --dark-blue: hsl(198, 62%, 26%);
   --dark-moderate-cyan: hsl(168, 34%, 41%);
-  --moderate-cyan: hsl(168, 44%, 70%); /* footer */
+  --moderate-cyan: hsl(168, 44%, 70%);
 
   /* NEUTRAL */
   --white: hsl(0, 0%, 100%);
@@ -308,6 +308,14 @@ header {
   padding: 2rem;
 }
 
+.header__logo path {
+  transition: fill 0.3s ease-in-out;
+}
+.header__logo:hover path,
+.header__logo:focus-visible path {
+  fill: var(--dark-blue);
+}
+
 .nav__wrapper {
   display: flex;
   justify-content: space-between;
@@ -382,7 +390,7 @@ header > svg {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(20px);
+    transform: translateY(30px);
   }
 }
 
@@ -403,6 +411,7 @@ main {
 .services__audience p {
   margin-top: clamp(1.5rem, 1.324rem + 0.751vw, 2rem);
   margin-bottom: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
+  color: var(--dark-grayish-blue);
 }
 
 article a {
@@ -449,11 +458,23 @@ article a::after {
   height: 100%;
   padding-top: calc(100% - 3.25rem);
 }
+.services__design > div {
+  --text-color: hsl(167, 40%, 24%);
+  color: var(--text-color);
+}
+.services__photography h3 {
+  --heading-color: hsl(197, 84%, 13%);
+  color: var(--heading-color);
+}
+.services__photography p {
+  color: var(--dark-blue);
+}
 
 .testimonials {
   padding-top: clamp(4rem, 1.887rem + 9.014vw, 10rem);
   padding-bottom: clamp(5.375rem, 3.746rem + 6.948vw, 10rem);
   padding-inline: 1.5rem;
+  color: var(--grayish-blue);
 }
 .testimonials > h2 {
   margin-bottom: 4rem;
@@ -471,6 +492,12 @@ article a::after {
   border-radius: 50%;
   width: 4.5rem;
   height: 4.5rem;
+}
+.testimonials__wrapper blockquote {
+  color: var(--very-dark-grayish-blue);
+}
+.testimonials__wrapper h3 {
+  color: var(--very-dark-des-blue);
 }
 
 /* Footer */
@@ -498,6 +525,7 @@ footer {
   gap: 3.625rem;
   margin-top: 40px;
   margin-bottom: 88px;
+  color: var(--dark-moderate-cyan);
 }
 
 footer ul {
