@@ -32,6 +32,13 @@ navLinks.forEach((link) => {
   });
 });
 
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && navbar.classList.contains("active")) {
+    closeNav();
+    navbarButton.focus();
+  }
+});
+
 function openNav() {
   setInert(true);
   navbar.classList.add("active");
